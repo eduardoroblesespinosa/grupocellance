@@ -155,8 +155,9 @@
                         </h1>
 	
                                 <div class="wrapper">
+					<div class="block">
                                     <section>
-                                        <table style="width:100%;">
+                                        <table>
                                             <tr>
 						    <td>
 							    <img src="https://webrtc.org/assets/images/webrtc-logo-horiz-retro-300x60.png"/>
@@ -176,10 +177,11 @@
                                         </table>
 					    </br>
                                         <!-- list of all available broadcasting rooms -->
-                                        <table style="width:100%;" id="rooms-list"></table>
+                                        <table id="rooms-list"></table>
                                         <!-- local/remote videos container -->
                                         <div id="videos-container"></div>
                                     </section>
+	</block>
                                     <script>
 
                                         var connection = new RTCMultiConnection();
