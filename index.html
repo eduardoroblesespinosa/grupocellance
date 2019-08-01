@@ -1,0 +1,453 @@
+<html>
+<head>
+    <title>Grupo Cellance: Encuentra las llantas para tu moto o auto al mejor precio.</title>
+    <link href="http://grupocellance.com/wp-content/themes/cellance/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="http://grupocellance.com/wp-content/themes/cellance/favicon.ico" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="></script>
+    <link href="//s.w.org" rel="dns-prefetch">
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "http:\/\/grupocellance.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.10" } };
+        !function (a, b, c) { function d(a, b) { var c = String.fromCharCode; l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0); var d = k.toDataURL(); l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0); var e = k.toDataURL(); return d === e } function e(a) { var b; if (!l || !l.fillText) return !1; switch (l.textBaseline = "top", l.font = "600 32px Arial", a) { case "flag": return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b); case "emoji": return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b }return !1 } function f(a) { var c = b.createElement("script"); c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d"); for (j = Array("flag", "emoji"), c.supports = { everything: !0, everythingExceptFlag: !0 }, i = 0; i < j.length; i++)c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (h = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <script src="http://grupocellance.com/wp-includes/js/wp-emoji-release.min.js?ver=4.9.10" defer="" type="text/javascript"></script>
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/CodecsHandler.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/IceServersHandler.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/RTCMultiConnection.js"></script>
+    <script src="https://webrtcexperiment.disqus.com/embed.js" type="text/javascript" async=""></script>
+    <script>
+        if (!location.hash.replace('#', '').length) {
+            location.href = location.href.split('#')[0] + '#' + (Math.random() * 100).toString().replace('.', '');
+            location.reload();
+        }
+    </script>
+    <style type="text/css">
+
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+
+        audio,
+        video {
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+            vertical-align: top;
+        }
+
+        
+
+        .setup {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            font-size: 102%;
+            height: 47px;
+            margin-left: -9px;
+            margin-top: 8px;
+            position: absolute;
+        }
+
+        
+
+       
+
+        .video-container {
+            background: white;
+            border: 2px solid black;
+            border-radius: 0.2em;
+            display: inline-block;
+            margin: 2em .2em;
+            padding: .1em;
+            vertical-align: top;
+        }
+
+            .video-container h2 {
+                border: 0;
+                border-top: 1px solid black;
+                display: block;
+                margin: 0;
+                text-align: center;
+            }
+
+            .video-container button {
+                font-size: .8em;
+                position: absolute;
+                z-index: 1;
+            }
+    </style>
+    <link id="contact-form-7-css" href="http://grupocellance.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0" rel="stylesheet" type="text/css" media="all">
+    <link id="woocommerce-layout-css" href="http://grupocellance.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=3.3.3" rel="stylesheet" type="text/css" media="all">
+    <link id="woocommerce-smallscreen-css" href="http://grupocellance.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=3.3.3" rel="stylesheet" type="text/css" media="only screen and (max-width: 768px)">
+    <link id="woocommerce-general-css" href="http://grupocellance.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=3.3.3" rel="stylesheet" type="text/css" media="all">
+    <link id="wp-pagenavi-css" href="http://grupocellance.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70" rel="stylesheet" type="text/css" media="all">
+    <link id="search-filter-plugin-styles-css" href="http://grupocellance.com/wp-content/plugins/search-filter-pro_v234/public/assets/css/search-filter.min.css?ver=2.3.4" rel="stylesheet" type="text/css" media="all">
+    <link id="wc-gateway-ppec-frontend-cart-css" href="http://grupocellance.com/wp-content/plugins/woocommerce-gateway-paypal-express-checkout/assets/css/wc-gateway-ppec-frontend-cart.css?ver=4.9.10" rel="stylesheet" type="text/css" media="all">
+    <script src="http://grupocellance.com/wp-includes/js/jquery/jquery.js?ver=1.12.4" type="text/javascript"></script>
+    <script src="http://grupocellance.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var SF_LDATA = { "ajax_url": "http:\/\/grupocellance.com\/wp-admin\/admin-ajax.php", "home_url": "http:\/\/grupocellance.com\/" };
+        /* ]]> */
+    </script>
+    <script src="http://grupocellance.com/wp-content/plugins/search-filter-pro_v234/public/assets/js/search-filter-build.min.js?ver=2.3.4" type="text/javascript"></script>
+    <script src="http://grupocellance.com/wp-content/plugins/search-filter-pro_v234/public/assets/js/chosen.jquery.min.js?ver=2.3.4" type="text/javascript"></script>
+    <link href="http://grupocellance.com/wp-json/" rel="https://api.w.org/">
+    <link title="RSD" href="http://grupocellance.com/xmlrpc.php?rsd" rel="EditURI" type="application/rsd+xml">
+    <link href="http://grupocellance.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml">
+    <meta name="generator" content="WordPress 4.9.10">
+    <meta name="generator" content="WooCommerce 3.3.3">
+    <link href="http://grupocellance.com/servicios/" rel="canonical">
+    <link href="http://grupocellance.com/?p=275" rel="shortlink">
+    <link href="http://grupocellance.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fgrupocellance.com%2Fservicios%2F" rel="alternate" type="application/json+oembed">
+    <link href="http://grupocellance.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fgrupocellance.com%2Fservicios%2F&amp;format=xml" rel="alternate" type="text/xml+oembed">
+    <noscript>&lt;style&gt;.woocommerce-product-gallery{ opacity: 1 !important; }&lt;/style&gt;</noscript>
+</head>
+<body class="servicios">
+	<header class="topblue">
+		<a class="locations" href="/gcellance/sucursales/">Sucursales</a>
+				<a class="mail desktop" href="mailto:contacto@grupocellance.com">oscar.chavez@grupocellance.com</a>
+		<a class="phone" href="#">(55) 5236-3801 | (55) 5236-3802</a>
+	</header>
+	<header>
+		<div class="left-logo">
+			<a href="http://grupocellance.com/"><img width="180" src="http://grupocellance.com/wp-content/themes/cellance/img/logogrupo.png">
+	</a>
+		</div>
+			<nav class="main desktop">
+				<ul>
+					<li><a class="llantas" href="/llantas/">Llantas</a></li>
+					<li><a class="link-servicios" href="/servicios/">Servicios</a></li>
+					<li><a class="link-nosotros" href="/nosotros/">Nosotros</a></li>
+					<li><a class="link-contacto" href="/contacto/">Contacto</a></li>
+				</ul>
+			</nav>
+		<div class="right-logo">
+						<img width="180" src="http://grupocellance.com/wp-content/themes/cellance/img/logomotos.png">
+		</div>
+	</header>
+		<nav class="main mobile">
+				<ul>
+				<li><a class="llantas" href="/llantas/">Llantas</a></li>
+					<li><a class="link-servicios" href="/servicios/">Servicios</a></li>
+					<li><a class="link-nosotros" href="/nosotros/">Nosotros</a></li>
+					<li><a class="link-contacto" href="/contacto/">Contacto</a></li>
+				</ul>
+			</nav>	<section>
+                        <h1 class="center">
+                            Lista completa de servicios<br>
+                            <p>Grupo Cellance ha brindando servicio de calidad por más de 32 años.</p>
+                        </h1>
+                                <div class="wrapper-big">
+                                    <section class="experiment">
+                                        <section>
+                                            
+                                            <input id="conference-name" type="text">
+                                            <button class="setup" id="setup-new-conference">Setup New Conference</button>
+                                            <button disabled="" class="setup" id="leave-conference" style="margin-left: 13em;">Leave</button>
+                                        </section>
+                                        <!-- list of all available broadcasting rooms -->
+                                        <table id="rooms-list" style="width: 100%;"></table>
+                                        <!-- local/remote videos container -->
+                                        <div id="videos-container"></div>
+                                    </section>
+                                    <script>
+
+                                        var connection = new RTCMultiConnection();
+
+                                        // https://github.com/muaz-khan/WebRTC-Experiment/tree/master/socketio-over-nodejs
+                                        var SIGNALING_SERVER = 'https://socketio-over-nodejs2.herokuapp.com:443/';
+                                        connection.openSignalingChannel = function (config) {
+                                            var channel = config.channel || connection.channel || 'default-namespace';
+                                            var sender = Math.round(Math.random() * 9999999999) + 9999999999;
+
+                                            io.connect(SIGNALING_SERVER).emit('new-channel', {
+                                                channel: channel,
+                                                sender: sender
+                                            });
+
+                                            var socket = io.connect(SIGNALING_SERVER + channel);
+                                            socket.channel = channel;
+
+                                            socket.on('connect', function () {
+                                                if (config.callback) config.callback(socket);
+                                            });
+
+                                            socket.send = function (message) {
+                                                socket.emit('message', {
+                                                    sender: sender,
+                                                    data: message
+                                                });
+                                            };
+
+                                            socket.on('message', config.onmessage);
+                                        };
+
+                                        connection.session = {
+                                            audio: true,
+                                            video: true
+                                        };
+
+                                        connection.onstream = function (e) {
+                                            appendVideo(e.mediaElement, e.streamid);
+                                        };
+
+                                        function appendVideo(video, streamid) {
+                                            video.width = 600;
+                                            video = getVideo(video, streamid);
+                                            videosContainer.appendChild(video);
+                                            rotateVideo(video);
+                                            scaleVideos();
+
+                                            document.getElementById('leave-conference').disabled = false;
+                                        }
+
+                                        function getVideo(video, streamid) {
+                                            var div = document.createElement('div');
+                                            div.className = 'video-container';
+
+                                            var button = document.createElement('button');
+                                            button.id = streamid;
+                                            button.innerHTML = 'Start Recording';
+                                            button.onclick = function () {
+                                                this.disabled = true;
+                                                if (this.innerHTML == 'Start Recording') {
+                                                    this.innerHTML = 'Stop Recording';
+                                                    connection.streams[this.id].startRecording({
+                                                        audio: true,
+                                                        video: true
+                                                    });
+                                                } else {
+                                                    this.innerHTML = 'Start Recording';
+                                                    var stream = connection.streams[this.id];
+                                                    stream.stopRecording(function (blob) {
+                                                        var h2;
+
+                                                        if (blob.audio && !(connection.UA.Chrome && stream.type == 'remote')) {
+                                                            h2 = document.createElement('h6');
+                                                            h2.innerHTML = '<a href="' + URL.createObjectURL(blob.audio) + '" target="_blank">Open recorded ' + blob.audio.type + '</a>';
+                                                            div.appendChild(h2);
+                                                        }
+
+                                                        if (blob.video) {
+                                                            h2 = document.createElement('h6');
+                                                            h2.innerHTML = '<a href="' + URL.createObjectURL(blob.video) + '" target="_blank">Open recorded ' + blob.video.type + '</a>';
+                                                            div.appendChild(h2);
+                                                        }
+                                                    });
+                                                }
+                                                setTimeout(function () {
+                                                    button.disabled = false;
+                                                }, 3000);
+                                            };
+                                            div.appendChild(button);
+                                            div.appendChild(video);
+                                            return div;
+                                        }
+
+                                        function rotateVideo(mediaElement) {
+                                            mediaElement.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(0deg)';
+                                            setTimeout(function () {
+                                                mediaElement.style[navigator.mozGetUserMedia ? 'transform' : '-webkit-transform'] = 'rotate(360deg)';
+                                            }, 1000);
+                                        }
+
+                                        connection.onstreamended = function (e) {
+                                            var div = e.mediaElement.parentNode;
+                                            div.style.opacity = 0;
+                                            rotateVideo(div);
+                                            setTimeout(function () {
+                                                if (div.parentNode) {
+                                                    div.parentNode.removeChild(div);
+                                                }
+                                                scaleVideos();
+                                            }, 1000);
+                                        };
+
+                                        var sessions = {};
+                                        connection.onNewSession = function (session) {
+                                            if (sessions[session.sessionid]) return;
+                                            sessions[session.sessionid] = session;
+
+                                            var tr = document.createElement('tr');
+                                            tr.innerHTML = '<td><strong>' + session.extra['session-name'] + '</strong> is running a conference!</td>' +
+                                                '<td><button class="join">Join</button></td>';
+                                            roomsList.appendChild(tr);
+
+                                            var joinRoomButton = tr.querySelector('.join');
+                                            joinRoomButton.setAttribute('data-sessionid', session.sessionid);
+                                            joinRoomButton.onclick = function () {
+                                                this.disabled = true;
+
+                                                var sessionid = this.getAttribute('data-sessionid');
+                                                session = sessions[sessionid];
+
+                                                if (!session) throw 'No such session exists.';
+
+                                                connection.join(session);
+                                            };
+                                        };
+
+                                        var videosContainer = document.getElementById('videos-container') || document.body;
+                                        var roomsList = document.getElementById('rooms-list');
+
+                                        document.getElementById('setup-new-conference').onclick = function () {
+                                            connection.sessionid = (Math.random() * 999999999999).toString().replace('.', '');
+                                            this.disabled = true;
+                                            connection.extra = {
+                                                'session-name': document.getElementById('conference-name').value || 'Anonymous'
+                                            };
+                                            connection.open();
+                                        };
+
+                                        document.getElementById('leave-conference').onclick = function () {
+                                            this.disabled = true;
+                                            connection.close();
+                                        };
+
+                                        // setup signaling to search existing sessions
+                                        connection.connect();
+
+                                        (function () {
+                                            var uniqueToken = document.getElementById('unique-token');
+                                            if (uniqueToken)
+                                                if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;"><a href="' + location.href + '" target="_blank">Share this link</a></h2>';
+                                                else uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace(/\./g, '-');
+                                        })();
+
+                                        function scaleVideos() {
+                                            var videos = document.querySelectorAll('video'),
+                                                length = videos.length,
+                                                video;
+
+                                            var minus = 130;
+                                            var windowHeight = 700;
+                                            var windowWidth = 600;
+                                            var windowAspectRatio = windowWidth / windowHeight;
+                                            var videoAspectRatio = 4 / 3;
+                                            var blockAspectRatio;
+                                            var tempVideoWidth = 450;
+                                            var maxVideoWidth = 550;
+
+                                            for (var i = length; i > 0; i--) {
+                                                blockAspectRatio = i * videoAspectRatio / Math.ceil(length / i);
+                                                if (blockAspectRatio <= windowAspectRatio) {
+                                                    tempVideoWidth = videoAspectRatio * windowHeight / Math.ceil(length / i);
+                                                } else {
+                                                    tempVideoWidth = windowWidth / i;
+                                                }
+                                                if (tempVideoWidth > maxVideoWidth)
+                                                    maxVideoWidth = tempVideoWidth;
+                                            }
+                                            for (var i = 0; i < length; i++) {
+                                                video = videos[i];
+                                                if (video)
+                                                    video.width = maxVideoWidth - minus;
+                                            }
+                                        }
+
+                                        window.onresize = scaleVideos;
+                                    </script>
+                                </div>
+	  </section>
+<footer>
+	<div class="wrapper">
+	<div class="block">
+	    <img width="14%" style="float:left" src="http://grupocellance.com/wp-content/themes/cellance/img/michelin_footer.jpg">
+
+		<p style="float: right;&#10;    width: 86%;&#10;    margin-top: 0px;">
+		    </p><h3>Sobre Grupo Cellance</h3>
+
+El Grupo Cellance, Distribuidor Autorizado de Industrias Michelin S.A. de C.V. distribuyendo las marcas de llantas Michelin, BF Goodrich, Uniroyal, estamos a sus o´rdenes ofrecie´ndoles calidad en nuestros servicios, con personal altamente capacitado, equipo y las herramientas adecuadas para atender los requerimientos de sus necesidades.
+<a href="/nosotros/">Ver más</a><p></p></div>
+	<div class="block">
+		<h3>Catálogo de Productos</h3>
+		<ul>
+					<li><a href="/?s=&amp;post_type=llantas&amp;cat=3">Llantas para motocicletas</a></li>
+					<li><a href="/?s=&amp;post_type=llantas&amp;cat=1">Llantas para autos</a></li>
+					<li><a href="/?s=&amp;post_type=llantas&amp;cat=2">Llantas para camionetas</a></li>
+					<li><a href="#">Descargar catálogo</a></li>
+				</ul>
+	</div>
+	<div class="block"><ul>
+				<h3>Servicios</h3>
+					<li><a href="/servicios/">Todos los servicios</a></li>
+					<li><a href="/servicio-a-flotillas/">Servicio a flotillas</a></li>
+				</ul></div>
+	<div class="block"><ul>
+				<h3>Grupo Cellance</h3>
+					<li><a href="/nosotros/">Nosotros</a></li>
+					<li><a href="/sucursales/">Sucursales</a></li>
+					<li><a href="">Terminos y condiciones</a></li>
+					<li><a href="#">Aviso de privacidad</a></li>
+				</ul>
+			</div>
+				<div class="block"><ul>
+				<h3>Contacto</h3>
+					<li><a href="#">Formulario de contacto</a></li>
+					<li><a href="#"> 
+					Tel: (55) 5236-3801<br> Y (55) 5236-3802
+					</a></li>
+				</ul></div>
+			</div>
+</footer>
+<footer class="blue">© 2018 Grupo Cellance S.A. de C.V. | Todos los derechos reservados. | Precios son expresados en moneda nacional (MXN).
+<br>
+Designed by:<a href="http://storebranding.mx/" target="_blank"> StoreBranding.MX </a> </footer>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+</script>
+  <script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/grupocellance.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Por favor, prueba que no eres un robot."}}};
+/* ]]> */
+</script>
+<script src="http://grupocellance.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0" type="text/javascript"></script>
+<script src="http://grupocellance.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70" type="text/javascript"></script>
+<script src="http://grupocellance.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/grupocellance.com\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script src="http://grupocellance.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.3.3" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/grupocellance.com\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_f0188ddc12bbf368ebf1e8191312eb45","fragment_name":"wc_fragments_f0188ddc12bbf368ebf1e8191312eb45"};
+/* ]]> */
+</script>
+<script src="http://grupocellance.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.3.3" type="text/javascript"></script>
+<script src="http://grupocellance.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4" type="text/javascript"></script>
+<script src="http://grupocellance.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Cerrar","currentText":"Hoy","monthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"monthNamesShort":["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],"nextText":"Siguiente","prevText":"Previo","dayNames":["domingo","lunes","martes","mi\u00e9rcoles","jueves","viernes","s\u00e1bado"],"dayNamesShort":["dom","lun","mar","mi\u00e9","jue","vie","s\u00e1b"],"dayNamesMin":["D","L","M","X","J","V","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script src="http://grupocellance.com/wp-includes/js/wp-embed.min.js?ver=4.9.10" type="text/javascript"></script>
+
+</body></html>
