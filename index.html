@@ -169,7 +169,6 @@
 								 <span>
                     Private ??
                     <a href="" target="_blank" title="Open this link in new tab. Then your room will be private!">
-			    <img src="">
                         <code>
                             <strong id="unique-token">#123456789</strong>
                         </code>
@@ -357,7 +356,7 @@
                                         (function () {
                                             var uniqueToken = document.getElementById('unique-token');
                                             if (uniqueToken)
-                                                if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;"><a href="' + location.href + '" target="_blank">Share this link</a></h2>';
+                                                if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h5 style="text-align:center;"><a href="' + location.href + '" target="_blank">Share this link</a></h5>';
                                                 else uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace(/\./g, '-');
                                         })();
 
