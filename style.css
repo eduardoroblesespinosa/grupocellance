@@ -317,6 +317,15 @@ label {color: #bbbbbb;
 	     flex-wrap: wrap;
 
 }
+.wrapper-rtc {
+	max-width: 830px;
+	margin: 400 auto;
+	padding: 2.2em 0;
+	display: flex;
+	 display: -webkit-flex;
+	     flex-wrap: wrap;
+
+}
 .block-list {
 	width: 404px;
 	 display: -webkit-flex;
