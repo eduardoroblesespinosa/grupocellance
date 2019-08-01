@@ -319,7 +319,7 @@ label {color: #bbbbbb;
 }
 .wrapper-rtc {
 	max-width: 830px;
-	margin: 400 auto;
+	margin: 0 auto;
 	padding: 2.2em 0;
 	display: flex;
 	 display: -webkit-flex;
