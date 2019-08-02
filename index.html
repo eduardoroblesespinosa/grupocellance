@@ -167,9 +167,9 @@
                     </a>
 					</span>
 					
-						 <input id="conference-name" type="text">
-						<button id="setup-new-conference">Setup New Conference</button>
-						<button disabled="" id="leave-conference">Leave</button>
+						<input id="conference-name" type="text">
+						<button id="setup-new-conference">Configurar Nueva Conferencia</button>
+						<button disabled="" id="leave-conference">Salir</button>
 									
 						</br>
 					</br>
@@ -298,8 +298,8 @@
                                             sessions[session.sessionid] = session;
 
                                             var tr = document.createElement('tr');
-                                            tr.innerHTML = '<td><strong>' + session.extra['session-name'] + '</strong> is running a conference!</td>' +
-                                                '<td><button class="join">Join</button></td>';
+                                            tr.innerHTML = '<td><strong>' + session.extra['session-name'] + '</strong> esta organizando una conferencia!</td>' +
+                                                '<td><button class="join">Unirse</button></td>';
                                             roomsList.appendChild(tr);
 
                                             var joinRoomButton = tr.querySelector('.join');
