@@ -89,12 +89,6 @@
                 position: absolute;
                 z-index: 1;
             }
-	.sample {
-		max_width:700px;
-		-webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-	    }
 	   
     </style>
     <link id="contact-form-7-css" href="http://grupocellance.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0" rel="stylesheet" type="text/css" media="all">
@@ -258,13 +252,13 @@
                                                         var h2;
 
                                                         if (blob.audio && !(connection.UA.Chrome && stream.type == 'remote')) {
-                                                            h2 = document.createElement('h6');
+                                                            h2 = document.createElement('h5');
                                                             h2.innerHTML = '<a href="' + URL.createObjectURL(blob.audio) + '" target="_blank">Open recorded ' + blob.audio.type + '</a>';
                                                             div.appendChild(h2);
                                                         }
 
                                                         if (blob.video) {
-                                                            h2 = document.createElement('h6');
+                                                            h2 = document.createElement('h5');
                                                             h2.innerHTML = '<a href="' + URL.createObjectURL(blob.video) + '" target="_blank">Open recorded ' + blob.video.type + '</a>';
                                                             div.appendChild(h2);
                                                         }
